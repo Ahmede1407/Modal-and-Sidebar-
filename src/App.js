@@ -6,10 +6,9 @@ import Modal from "./Modal";
 const App = () => {
   return (
     <>
-      <h2>Modal-Sidebar project setup</h2>
       <Home />
-      <Sidebar />
       <Modal />
+      <Sidebar />
     </>
   );
 };
