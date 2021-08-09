@@ -1,14 +1,16 @@
 import React from "react";
+import { useCustomContext } from "./context";
 import logo from "./logo.svg";
 import { FaTimes } from "react-icons/fa";
 import { social, links } from "./data";
 
 const Sidebar = () => {
+  const { isSidebarOpen, closeSidebar } = useCustomContext();
   return (
-    <aside className={`sidebar`}>
+    <aside className={`${isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}`}>
       <div className="sidebar-header">
         <img src={logo} className="logo" alt="Ahmed" />
-        <button className="close-btn">
+        <button className="close-btn" onClick={closeSidebar}>
           <FaTimes />
         </button>
       </div>

@@ -3,15 +3,16 @@ import { useCustomContext } from "./context";
 import { FaBars } from "react-icons/fa";
 
 const Home = () => {
-  const data = useCustomContext();
-  console.log(data);
+  const { openSidebar, openModal } = useCustomContext();
 
   return (
     <main>
-      <button className="sidebar-toggle">
+      <button className="sidebar-toggle" onClick={openSidebar}>
         <FaBars />
       </button>
-      <button className="btn">show modal</button>
+      <button className="btn" onClick={openModal}>
+        show modal
+      </button>
     </main>
   );
 };
